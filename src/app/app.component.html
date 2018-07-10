@@ -18,9 +18,7 @@
   </li>
 </ul>
 <router-outlet></router-outlet> -->
-
-<nav class="navbar navbar-default" role="navigation">
-  <!-- Brand and toggle get grouped for better mobile display -->
+ <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
   <div class="container">
       <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -29,22 +27,21 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" routerLink="/">Awesome Product Catalog</a>
+          <a class="navbar-brand" [routerLink]="['/']">Bloging Site</a>
       </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
-              <li routerLink="/about" routerLinkActive="active"><a>About</a></li>
-              <li routerLink="/products" routerLinkActive="active"><a>Product Catalog</a></li>
-              <li routerLink="/feedback" routerLinkActive="active"><a>Feedback</a></li>
+              <li><a [routerLink]="['/about']" [routerLinkActive]="['active']">About</a></li>
+              <li><a [routerLink]="['/blogs']" [routerLinkActive]="['active']">Blogs catalog</a></li>
+              <li><a [routerLink]="['/feedback']" [routerLinkActive]="['active']">Feedback</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Logout</a></li>
+              <li><a routerLink="/profile-and-settings">Profile/Settings</a></li>
+              <li><a (click)="logout()" *ngIf="isLoggedIn()">Logout</a></li>
+              <li><a [routerLink]="['/login']" *ngIf="!isLoggedIn()">Login</a></li>
           </ul>
-      </div><!-- /.navbar-collapse -->
+      </div>
   </div>
-  <div class="btn btn-primary">Click me</div>
 </nav>
-
 <router-outlet></router-outlet>

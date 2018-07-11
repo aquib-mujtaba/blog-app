@@ -4,5 +4,5 @@ export interface IBlog
     authorId: number,
     title: string,
     text: string
-    // postDate: string
+    postedDate:string
 }

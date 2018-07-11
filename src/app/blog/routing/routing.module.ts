@@ -22,4 +22,4 @@ import { BlogFormComponent } from '../blog-form/blog-form.component';
   exports:[CommonModule,RouterModule],
   declarations: []
 })
-export class RoutingModule { }
+export class RoutingModule{ }

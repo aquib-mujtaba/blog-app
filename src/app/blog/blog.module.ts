@@ -7,12 +7,14 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { RoutingModule } from './routing/routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '../../../node_modules/@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 @NgModule({
   imports: [
     CommonModule,
     RoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   declarations: [BlogListComponent, BlogDetailsComponent, BlogFormComponent, BlogsComponent],
   exports:[BlogListComponent,BlogDetailsComponent],

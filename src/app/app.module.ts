@@ -30,6 +30,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
       { path: 'about', component: AboutComponent },
       // { path: 'profile-and-settings', component: ProfileAndSettingsComponent },
       // { path: 'feedback', loadChildren: 'src/app/feedback/feedback.module'},
+      { path: '', redirectTo: '/blogs', pathMatch: 'full' },
+
       { path: '**', component: PageNotFoundComponent }
     ])
   ],

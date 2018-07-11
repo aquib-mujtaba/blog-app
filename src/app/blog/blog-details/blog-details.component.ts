@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IBlog } from '../Blog';
 import BlogArray from '../blogs';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-blog-details',
   templateUrl: './blog-details.component.html',
@@ -9,10 +10,12 @@ import BlogArray from '../blogs';
 export class BlogDetailsComponent implements OnInit {
 
   blogs: IBlog;
-  constructor() { }
+  blogId: number;
+  constructor(private _activeRouter: ActivatedRoute) { }
 
   ngOnInit() {
-    this.blogs=BlogArray[0]
+this.blogId=this._activeRouter.snapshot.params.id;
+    this.blogs=BlogArray[this.blogId-1];
   }
 
 }

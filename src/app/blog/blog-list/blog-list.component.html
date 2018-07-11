@@ -12,9 +12,11 @@
     <tbody>
       <tr *ngFor="let blog of blogs">
         <td>{{blog.authorId}}</td>
-        <td>{{blog.title}}</td>
+        <td>
+          <a [routerLink]="blog.id">{{blog.title}}</a>
+        </td>
         <td>{{blog.postedDate}}</td>
-        <td>{{blog.text| ellipsize:20}}</td>
+        <td>{{blog.text| ellipsize:100}}</td>
       </tr>
     </tbody>
   </table>

@@ -1,5 +1,10 @@
 <div class="container">
   <h2>Blog catalog</h2>
+
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" *ngFor="let blog of blogs">
+  <a [routerLink]="blog.id" class="thumbnail">
+    <!-- <div class="thumbnail"> -->
+    <!-- <img data-src="#" alt=""> -->         
   <table class=" table table-striped table-bordered">
     <thead>
       <tr>
@@ -10,14 +15,20 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let blog of blogs">
+      <tr>
+      <!-- <tr *ngFor="let blog of blogs"> -->
         <td>{{blog.authorId}}</td>
         <td>
-          <a [routerLink]="blog.id">{{blog.title}}</a>
+          <!-- <a [routerLink]="blog.id">{{blog.title}}</a> -->
+          {{blog.title}}
         </td>
         <td>{{blog.postedDate}}</td>
         <td>{{blog.text| ellipsize:100}}</td>
       </tr>
     </tbody>
   </table>
+
+<!-- </div> -->
+  </a>
+</div>
 </div>

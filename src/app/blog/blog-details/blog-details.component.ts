@@ -14,15 +14,15 @@ export class BlogDetailsComponent implements OnInit {
   constructor(private _activeRouter: ActivatedRoute) { }
 
   ngOnInit() {
-    this.blogId=this._activeRouter.snapshot.params.id;
-        this.blogs=BlogArray[this.blogId-1];
+    // this.blogId=this._activeRouter.snapshot.params.id;
+    //     this.blogs=BlogArray[this.blogId-1];
 
-    // this._activeRouter.parent.paramMap.subscribe(
-    //   params => {
-    //     this.blogId = +params.get('id');
-    //     this.blogs = BlogArray[this.blogId - 1];
-    //   }
-    // );
+    this._activeRouter.paramMap.subscribe(
+      params => {
+        this.blogId = +params.get('id');
+        this.blogs = BlogArray[this.blogId - 1];
+      }
+    );
 
   }
 

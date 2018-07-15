@@ -1,4 +1,4 @@
-<div class="container margin-top-large">
+<div class="container margin-top-large" *ngIf="blogs">
   <!-- <div class="panel panel-primary"> -->
     <!-- <div class="panel-heading">
       {{blogs.title}}
@@ -28,6 +28,12 @@
         true}"><a>Comments</a></li>
     <li role="presentation" routerLinkActive="active" routerLink="./add"><a>Add new Post</a></li>
 </ul>
+
+<div class="clearfix">
+
+</div>
+
 <router-outlet></router-outlet>
-  <!-- </div> -->
+<!-- </div> -->
+
 </div>

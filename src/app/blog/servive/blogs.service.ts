@@ -8,7 +8,7 @@ import { environment } from '../../../environments/environment';
 })
 export class BlogsService {
 
-  constructor(private _httpClint: HttpClient) { }
+  constructor(private _httpClient: HttpClient) { }
 
   httpOptions={
     header:new HttpHeaders({
@@ -20,6 +20,18 @@ export class BlogsService {
 
   getBlogsList():Observable<any>
   {
-    return this._httpClint.get(environment.apiBaseUrl+ 'blogs');
+    return this._httpClient.get(environment.apiBaseUrl+ '/blogs');
+  }
+  getBlogDetails(id:number): Observable<any>{
+    return this._httpClient.get(`${environment.apiBaseUrl}/blogs/${id}`)
+  }
+
+  getBlogComments(id:number):Observable<any>
+  {
+    return this._httpClient.get(`${environment.apiBaseUrl}/blogs/${id}/comments`)
+  }
+  postComments(id:number,comments):Observable<any>
+  {
+    return this._httpClient.post(`${environment.apiBaseUrl}/blogs/${id}/comments`,comments)
   }
 }

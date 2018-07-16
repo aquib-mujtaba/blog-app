@@ -27,12 +27,8 @@
     <li role="presentation" routerLinkActive="active" routerLink="./" [routerLinkActiveOptions]="{exact:
         true}"><a>Comments</a></li>
     <li role="presentation" routerLinkActive="active" routerLink="./add"><a>Add new Post</a></li>
-</ul>
-
-<div class="clearfix">
-
-</div>
-
+    <li><a [routerLink]="['/blogs']" [routerLinkActive]="['active']">Back To Blog List</a></li>
+  </ul>
 <router-outlet></router-outlet>
 <!-- </div> -->
 

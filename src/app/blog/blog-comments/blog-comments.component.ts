@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '../../../../node_modules/@angular/router';
+import { ActivatedRoute, Router } from '../../../../node_modules/@angular/router';
 import { BlogsService } from '../servive/blogs.service';
+import Comments from '../Comments';
 
 @Component({
   selector: 'app-blog-comments',
@@ -10,7 +11,8 @@ import { BlogsService } from '../servive/blogs.service';
 export class BlogCommentsComponent implements OnInit {
 blogId: number;
 reviews: any;
-  constructor(private _activeRouter:ActivatedRoute,private _blogService:BlogsService) { }
+comments: Comments = new Comments(-1, -1, '', '', '');
+  constructor(private _activeRouter:ActivatedRoute,private _blogService:BlogsService, private _router: Router) { }
 
   ngOnInit() {
     this._activeRouter.parent.paramMap.subscribe(
@@ -23,4 +25,15 @@ reviews: any;
     );
   }
 
+  submitComments(comments) {
+    this._blogService.postComments(this.blogId, comments).subscribe(
+      respoce=>{
+      alert( 'Thanks for the review - it has been added successfully' );
+      this.reviews.push(respoce)
+      updatedComments => this._router.navigate(['/blogs', this.blogId])
+    }
+    );
+  }
+
 }
+

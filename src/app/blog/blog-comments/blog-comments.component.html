@@ -17,23 +17,23 @@
   </a>
 </div>
 
-<form action="" method="POST" role="form">
+<form  role="form" (ngSubmit)="submitComments( form.value )" #form="ngForm">
   <legend>Add your Comments Here</legend>
 
   <div class="form-group">
-    <label for="">Title</label>
-    <input type="text" class="form-control" id="title" placeholder="Type your Title Here">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" name="title" [(ngModel)]="comments.title" placeholder="Type your Title Here">
   </div>
   <div class="form-group">
-      <label for="">Name</label>
-      <input type="text" class="form-control" id="title" placeholder="Type your Name Here">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="comments.name" placeholder="Type your Name Here">
     </div>
 
   <div class="form-group">
-    <label for="comment">Comment:</label>
-    <textarea class="form-control" rows="5" id="comment"></textarea>
+    <label for="text">Comment:</label>
+    <textarea class="form-control" rows="5" id="text" name="text" [(ngModel)]="comments.text"></textarea>
   </div>
 
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit"  value="Post comments" class="btn btn-primary">Submit</button>
 </form>

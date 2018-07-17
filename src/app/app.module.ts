@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { BlogModule } from './blog/blog.module';
 import { AboutComponent} from './about/about.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './authentication/auth.service';
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
       { path: '**', component: PageNotFoundComponent }
     ])
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

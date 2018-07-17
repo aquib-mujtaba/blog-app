@@ -39,7 +39,10 @@
           <ul class="nav navbar-nav navbar-right">
               <li><a routerLink="/profile-and-settings">Profile/Settings</a></li>
               <!-- <li><a (click)="logout()" *ngIf="isLoggedIn()">Logout</a></li> -->
-              <!-- <li><a [routerLink]="['/login']" *ngIf="!isLoggedIn()">Login</a></li> -->
+            <li><a (click)="logout()">Logout</a></li>
+            <!-- <li><a [routerLink]="['/login']" *ngIf="!isLoggedIn()">Login</a></li> -->
+            <li><a [routerLink]="['/login']">Login</a></li>
+
           </ul>
       </div>
   </div>

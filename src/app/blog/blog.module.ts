@@ -9,12 +9,17 @@ import { FormsModule } from '../../../node_modules/@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { BlogCommentsComponent } from './blog-comments/blog-comments.component';
 import { BlogsService } from './servive/blogs.service';
+import {  NgxEditorModule } from 'ngx-editor';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+
 @NgModule({
   imports: [
     CommonModule,
     RoutingModule,
     HttpClientModule,
+    NgxEditorModule,
     FormsModule,
+    TooltipModule.forRoot(),
     SharedModule
   ],
   declarations: [BlogListComponent, BlogDetailsComponent, BlogFormComponent, BlogCommentsComponent],

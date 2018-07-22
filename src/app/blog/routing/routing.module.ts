@@ -11,10 +11,11 @@ import { BlogFormComponent } from '../blog-form/blog-form.component';
     CommonModule,
     RouterModule.forChild([
       {path: 'blogs', component: BlogListComponent},
+      {path:'add',component:BlogFormComponent},
       {path: 'blogs/:id', component: BlogDetailsComponent,
       children:[
-       { path:'',component:BlogCommentsComponent}, //BlogsComponent
-       {path:'add',component:BlogFormComponent}
+       { path:'',component:BlogCommentsComponent} //BlogsComponent
+      //  ,{path:'add',component:BlogFormComponent}
       ]
     },
     ])

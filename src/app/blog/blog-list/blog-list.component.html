@@ -1,6 +1,8 @@
 <div class="container">
   <h2>Blog catalog</h2>
+  <!-- <div *ngFor="let author of authors"> -->
 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 " *ngFor="let blog of blogs">
+  
   <!-- <a [routerLink]="blog.id" class="thumbnail"> -->
     <!-- <div class="thumbnail"> -->
     <!-- <img data-src="#" alt=""> -->         
@@ -16,7 +18,8 @@
     <tbody>
       <tr>
       <!-- <tr *ngFor="let blog of blogs"> -->
-        <td>{{blog.authorId}}</td>
+        <!-- <td ><span *ngFor="let author of authors"> {{author.name}}</span></td> -->
+<td>{{blog.authorId}}</td>
         <td>
           <!-- <a [routerLink]="blog.id">{{blog.title}}</a> -->
           {{blog.title}}
@@ -26,7 +29,7 @@
       </tr>
     </tbody>
   </table>
-
+<!-- </div> -->
 <!-- </div> -->
   <!-- </a> -->
 </div>

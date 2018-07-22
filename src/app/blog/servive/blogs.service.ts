@@ -30,8 +30,18 @@ export class BlogsService {
   {
     return this._httpClient.get(`${environment.apiBaseUrl}/blogs/${id}/comments`)
   }
+  getAuthorsList():Observable<any>
+  {
+    return this._httpClient.get(environment.apiBaseUrl+ '/authors')
+  }
+
+
   postComments(id:number,comments):Observable<any>
   {
     return this._httpClient.post(`${environment.apiBaseUrl}/blogs/${id}/comments`,comments)
+  }
+  postBlog(postBlog):Observable<any>
+  {
+    return this._httpClient.post(`${environment.apiBaseUrl}/blogs/`,postBlog)
   }
 }

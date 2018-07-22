@@ -48,6 +48,27 @@
       "postedDate": "Mar 19, 2017",
       "title": "Some amazing but equally simple coin tricks",
       "text": "Duis elit elit consectetur nostrud tempor deserunt qui do. Consectetur ea consequat aute quis dolore proident do. Veniam nostrud excepteur officia sint labore consequat elit velit ad ullamco minim. Exercitation fugiat non eiusmod reprehenderit velit. In laboris voluptate pariatur aute nulla.</p><p>Non id quis irure magna Lorem. Ex deserunt sit et consequat in non laborum. Ut aliquip proident incididunt ullamco fugiat in labore irure et commodo. Nostrud sunt in irure reprehenderit dolore. Velit ea nostrud laborum excepteur ipsum.</p><p>Cillum non ad laboris ut sit. Aute eu elit elit labore nostrud sint irure amet. Elit aliqua quis commodo in deserunt nisi incididunt velit consequat culpa id enim non. Ullamco ea minim eiusmod commodo Lorem culpa id sunt laborum ut ea esse in.</p><p>Voluptate cupidatat ad deserunt excepteur cupidatat dolor deserunt qui nostrud. Tempor labore do elit sit officia. Nulla adipisicing excepteur cupidatat nulla ullamco est Lorem cillum eu id. Aute sunt nostrud voluptate sint ullamco dolor laborum in laboris. Do ullamco laborum eiusmod ut. Aliqua in ipsum veniam eiusmod magna ad enim."
+    },
+    {
+      "title": "Test",
+      "authorId": "1",
+      "text": "nm",
+      "postedDate": "Jul 22, 2018",
+      "id": 6
+    },
+    {
+      "title": "Test",
+      "authorId": "1",
+      "text": "mnn",
+      "postedDate": "Jul 22, 2018",
+      "id": 7
+    },
+    {
+      "title": "Test",
+      "authorId": "3",
+      "text": "kjkjkj",
+      "postedDate": "Jul 22, 2018",
+      "id": 8
     }
   ],
   "comments": [
@@ -106,48 +127,6 @@
       "text": "Testing",
       "blogId": "1",
       "id": 8
-    },
-    {
-      "title": "Testing2",
-      "name": "aqtttr",
-      "text": "sggsgsg",
-      "blogId": "1",
-      "id": 9
-    },
-    {
-      "title": "kfdjj",
-      "name": "kr;lkelk",
-      "text": ";'re;;rr",
-      "blogId": "1",
-      "id": 10
-    },
-    {
-      "title": "test",
-      "name": "l;;lewlew",
-      "text": ";ll;;l;lfgdfg",
-      "blogId": "1",
-      "id": 11
-    },
-    {
-      "title": "hfghh",
-      "name": "fhghgh",
-      "text": "fghhhg",
-      "blogId": "1",
-      "id": 12
-    },
-    {
-      "title": "ttrtr",
-      "name": "trtrtrtrtrtrtrtrtrtr",
-      "text": "trtrtrtrtrtrtr",
-      "blogId": "1",
-      "id": 13
-    },
-    {
-      "title": "hhh",
-      "name": "hghhh",
-      "text": "hghhhdg",
-      "blogId": "1",
-      "id": 14
     },
     {
       "title": "testing",

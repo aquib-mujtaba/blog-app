@@ -12,14 +12,13 @@ import { AboutComponent} from './about/about.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './authentication/auth.service';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     PageNotFoundComponent,
     AboutComponent
-  ],
+      ],
   imports: [
     BrowserModule,
     BlogModule,

@@ -9,17 +9,21 @@ import { FormsModule } from '../../../node_modules/@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { BlogCommentsComponent } from './blog-comments/blog-comments.component';
 import { BlogsService } from './servive/blogs.service';
-import {  NgxEditorModule } from 'ngx-editor';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
+// import {  NgxEditorModule } from 'ngx-editor';
+// import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+
 
 @NgModule({
   imports: [
     CommonModule,
     RoutingModule,
     HttpClientModule,
-    NgxEditorModule,
+    // NgxEditorModule,
+    // TooltipModule.forRoot(),
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot(),
     FormsModule,
-    TooltipModule.forRoot(),
     SharedModule
   ],
   declarations: [BlogListComponent, BlogDetailsComponent, BlogFormComponent, BlogCommentsComponent],

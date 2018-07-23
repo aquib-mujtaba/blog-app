@@ -10,7 +10,7 @@
     <div class="form-group">
       <label for="authorId">Select Auther</label>
       <select name="authorId" id="authorId"  class="form-control" required="required" ngModel>
-        <option>--Select Auther--</option>
+        <option >--Select Auther--</option>
         <option value="{{author.id}}" *ngFor="let author of authors">{{author.name}}</option>
       </select>
     </div>
@@ -19,7 +19,8 @@
       <label for="text">Type your blog here:</label>
       <textarea class="form-control" rows="5" id="text" name="text" ngModel></textarea>
     </div>
-    <app-ngx-editor [placeholder]="'Enter text here...'" [spellcheck]="true" [(ngModel)]="htmlContent"></app-ngx-editor>
+    <!-- <div [froalaEditor]>Hello, Froala!</div> -->
+    <!-- <app-ngx-editor [placeholder]="'Enter text here...'" [spellcheck]="true" [(ngModel)]="htmlContent"></app-ngx-editor> -->
     <div class="form-group">
       <div class="col-md-4">
         <input type="reset" value="Reset" class="btn btn-default" />
